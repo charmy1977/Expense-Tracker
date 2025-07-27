@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --nav-border: #ddd;
+  --reset-bg: #dc3545;
+  --reset-color: white;
+}
+
+:root.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --nav-border: #333;
+  --reset-bg: #dc3545;
+  --reset-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links li.active a {
+  font-weight: bold;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.reset-btn {
+  padding: 6px 12px;
+  background-color: var(--reset-bg);
+  color: var(--reset-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-switch .switch-icon {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.theme-switch .switch-icon input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch .icon-slider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 24px;
+  background-color: #ccc;
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.theme-switch .switch-icon input:checked + .icon-slider {
+  background-color: #333;
+  color: white;
+}

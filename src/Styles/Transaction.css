@@ -1,0 +1,69 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --table-header-bg: #f9f9f9;
+  --table-border: #ddd;
+  --edit-btn-bg: #ffc107;
+  --edit-btn-text: #000;
+  --delete-btn-bg: #dc3545;
+  --delete-btn-text: #fff;
+}
+
+:root.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --table-header-bg: #1f1f1f;
+  --table-border: #555;
+  --edit-btn-bg: #e0a800;
+  --edit-btn-text: #000;
+  --delete-btn-bg: #dc3545;
+  --delete-btn-text: #fff;
+}
+
+.transactions-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+thead {
+  background: var(--table-header-bg);
+}
+
+td, th {
+  padding: 12px;
+  border: 1px solid var(--table-border);
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background: var(--edit-btn-bg);
+  color: var(--edit-btn-text);
+}
+
+.delete-btn {
+  background: var(--delete-btn-bg);
+  color: var(--delete-btn-text);
+}

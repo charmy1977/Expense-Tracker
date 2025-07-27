@@ -1,0 +1,21 @@
+:root {
+  --no-transactions-text: #555;
+  --no-transactions-icon: #888;
+}
+
+:root.dark {
+  --no-transactions-text: #ccc;
+  --no-transactions-icon: #aaa;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 20px;
+  color: var(--no-transactions-text);
+}
+
+.no-transactions-icon {
+  font-size: 50px;
+  color: var(--no-transactions-icon);
+  margin-bottom: 10px;
+}

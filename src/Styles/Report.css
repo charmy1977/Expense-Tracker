@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --border-color: #ddd;
+  --income-color: green;
+  --expense-color: red;
+}
+
+:root.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --card-bg: #1c1c1c;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --border-color: #555;
+  --income-color: #6aff6a;
+  --expense-color: #ff6a6a;
+}
+
+.reports-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.date-filter {
+  margin-bottom: 20px;
+}
+
+.date-filter label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date-filter input {
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.income-card,
+.expense-card {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--card-shadow);
+  text-align: center;
+  margin: 0 10px;
+  color: var(--text-color);
+}
+
+.income {
+  color: var(--income-color);
+}
+
+.expense {
+  color: var(--expense-color);
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chart-item {
+  flex: 1;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--card-shadow);
+  text-align: center;
+  margin: 0 10px;
+  color: var(--text-color);
+}
+
+.chart-wrapper {
+  height: 350px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

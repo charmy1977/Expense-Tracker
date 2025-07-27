@@ -1,0 +1,100 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --box-bg: #ffffff;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+  --button-bg: #dc3545;
+  --button-text: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+:root.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --box-bg: #1c1c1c;
+  --input-bg: #333333;
+  --border-color: #555;
+  --button-bg: #dc3545;
+  --button-text: #ffffff;
+  --box-shadow: rgba(255, 255, 255, 0.05);
+}
+
+.add-transaction-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.transaction-box {
+  background: var(--box-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--box-shadow);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.transaction-box input {
+  width: 374px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.transaction-type {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.transaction-type input {
+  width: 100%;
+}
+
+.transaction-type label {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 374px !important;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s, background-color 0.3s;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid #007bff;
+}
+
+button {
+  width: 100%;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
